@@ -7,13 +7,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    @IBOutlet var redLight: UIView!
+    @IBOutlet var yellotLight: UIView!
+    @IBOutlet var greenLight: UIView!
+    
+    private var cornerRadiusForLights: CGFloat = 75
+    
+    @IBOutlet var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        nextButton.layer.cornerRadius = 10
+        redLight.layer.cornerRadius = cornerRadiusForLights
+        yellotLight.layer.cornerRadius = cornerRadiusForLights
+        greenLight.layer.cornerRadius = cornerRadiusForLights
     }
-
-
 }
 
